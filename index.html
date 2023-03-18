@@ -60,11 +60,13 @@ function addName() { <!--This function should add my name to the canvas-->
   ctx.fillText("Remy",10,50);
  }
 
-window.onload = function addImage() {
+function addImage() { <!--This function should add image to the canvas-->
   var canvas = document.getElementById("myCanvas");
   var context = canvas.getContext("2d");
-  var image = document.getElementById("Longhorn");
-  context.drawImage(image, 0, 0);
+  var longhorn = newImage();
+  longhorn.src = "https://www.google.com/url?sa=i&url=https%3A%2F%2Ftexassports.com%2F&psig=AOvVaw07G1G2iz6-1lcuBb6Jdk8r&ust=1679263429516000&source=images&cd=vfe&ved=0CA4QjRxqFwoTCIDigPO95v0CFQAAAAAdAAAAABAJ";
+  longhorn.onload = function() {
+    context.drawImage(longhorn, 0, 0);
 }
 
 </script>
@@ -116,13 +118,12 @@ window.onload = function addImage() {
         <p>Draw Below</p>
 	<canvas id="myCanvas" width="300" height="150" style="border:1px solid #000000;"> <!--Canvas code. Changed size.-->
         </canvas>
-	<img id="Longhorn" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Ftexassports.com%2F&psig=AOvVaw07G1G2iz6-1lcuBb6Jdk8r&ust=1679263429516000&source=images&cd=vfe&ved=0CA4QjRxqFwoTCIDigPO95v0CFQAAAAAdAAAAABAJ" alt="Longhorn Logo" width="150" height="120">
 	<p> </p> <!--Empty paragraph-->
 	<a onclick= "drawRectangle();" class="w3-btn w3-black"> Draw Rectangle </a> <!--This should activate the function for drawing a rectangle inside the canvas-->
-	<p> </p>
+	<p> </p> <!--Empty paragraph to create space for next button-->
 	<a onclick= "addName();" class="w3-btn w3-black"> Add Name </a> <!--This should activate the function to add my name to the canvas-->
 	<p> </p> <!--Empty paragraph to create space for next button-->
-	<a onclick = "addImage();" class="w3-btn w3-black"> Add Name </a> <!--This should activate the function to add image to the canvas-->
+	<a onclick = "addImage();" class="w3-btn w3-black"> Add Image </a> <!--This should activate the function to add image to the canvas-->
         <p> </p> <!--Empty paragraph to create space for next button-->
 	<a onclick= "eraseCanvas();" class="w3-btn w3-black"> Erase </a> <!--This should activate the function to erase the canvas-->
 	
