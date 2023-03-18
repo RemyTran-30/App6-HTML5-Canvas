@@ -60,7 +60,7 @@ function addName() { <!--This function should add my name to the canvas-->
   ctx.fillText("Remy",10,50);
  }
 
-function addImage() { <!--This function should add image to the canvas-->
+<!-- function addImage() { <!--This function should add image to the canvas-->
   var canvas = document.getElementById("myCanvas");
   var context = canvas.getContext("2d");
   var longhorn = newImage();
@@ -68,6 +68,14 @@ function addImage() { <!--This function should add image to the canvas-->
   longhorn.onload = function() {
   context.drawImage(longhorn, 0, 0) 
   } <!--Added end bracket-->
+}
+-->
+
+function addImage() { <!--Test function should add image to the canvas-->
+  var c = document.getElementById("myCanvas");
+  var ctx = c.getContext("2d");
+  var img = document.getElementById("longhorn");
+  ctx.drawImage(img,10,10);
 }
 
 </script>
@@ -132,6 +140,9 @@ function addImage() { <!--This function should add image to the canvas-->
         </div>
 </div>
 
+<div class="page" id="imageStorage"> <!--Testing if I could use another container to store the image-->
+<img id="longhorn" src="https://www.google.com/url?sa=i&url=http%3A%2F%2Fclipart-library.com%2Ftexas-longhorns-cliparts.html&psig=AOvVaw07G1G2iz6-1lcuBb6Jdk8r&ust=1679263429516000&source=images&cd=vfe&ved=0CA4QjRxqFwoTCIDigPO95v0CFQAAAAAdAAAAABAO" alt="Longhorn Logo" width="200" height="175">
+</div>
 
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
