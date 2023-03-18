@@ -20,12 +20,13 @@ Brief Description of Goal of Code:
 The goal of this code is to create a canvas that allows the user to display shapes, lines, text, and images.
 
 Known Issues:
-None at the time.
+Currently not able to load image into the canvas.
 
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
-<!--Added to the comment above-->
+	
+<!--Filled out necessary sections above-->
 
    <head> 
       <title>App6---HTML5-Canvas</title>  
@@ -41,26 +42,26 @@ var docMod = document.lastModified; // loads last modified time stamp into docMo
 alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 
-function drawRectangle() { <!--This line of code should draw a rectangle inside the canvas-->
-  var rectangleCanvas = document.getElementById("myCanvas");
-  var rectangleContext = rectangleCanvas.getContext("2d");
-  rectangleContext.fillRect(50, 25, 150, 100);
+function drawRectangle() { //This line of code should draw a rectangle inside the canvas
+  var rectangleCanvas = document.getElementById("myCanvas"); //Passes information to the canvas
+  var rectangleContext = rectangleCanvas.getContext("2d"); //Adjusted the type of canvas, which is 2D
+  rectangleContext.fillRect(50, 25, 150, 100); //The dimensions of the rectange
 }
 
 function eraseCanvas() { //This function should erase the canvas
   var eraseCanvas = 
-  document.getElementById("myCanvas");
-  eraseCanvas.width = eraseCanvas.width;
+  document.getElementById("myCanvas"); //Passes information to the canvas
+  eraseCanvas.width = eraseCanvas.width; //Allows for reset of canvas
 }
 
 function addName() { //This function should add my name to the canvas
-  var c = document.getElementById("myCanvas");
-  var ctx = c.getContext("2d");
-  ctx.font = "30px Arial";
-  ctx.fillText("Remy",10,50);
+  var c = document.getElementById("myCanvas"); //Passes information to the canvas
+  var ctx = c.getContext("2d"); //Adjusted the type of canvas, which is 2D
+  ctx.font = "30px Arial"; //Font of text
+  ctx.fillText("Remy",10,50); //Dimensions of text
  }
 
-function addImage() { //This function should add image to the canvas
+function addImage() { //This function should add image to the canvas. Currently not working
   var canvas = document.getElementById("myCanvas");
   var context = canvas.getContext("2d");
   var longhorn = newImage();
@@ -103,7 +104,7 @@ function addImage() { //This function should add image to the canvas
 <div id="content" class="w3-container">
 	<p>Are You Ready To Draw With Canvas?</p> <!--Added text here-->
 	
-	<a href="#one" class="w3-btn w3-black w3-round"> Get Started </a>
+	<a href="#one" class="w3-btn w3-black w3-round"> Get Started </a> <!-- Button to move to the next page with canvas-->
 		
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
@@ -111,31 +112,38 @@ function addImage() { //This function should add image to the canvas
 		
 </div>
 
-<div class="page" id="one">  <!--Created second page-->
+<div class="page" id="one">  <!--Second Page-->
         <div id="header" class="w3-container w3-flat-carrot"> 
-               <h1>Canvas</h1> 
+               <h1>Canvas</h1> <!--Header for the second page-->
         </div>
     
         <div id="content" class="w3-container"> 
-        <p>Draw Below</p>
+        <p>Draw Below</p> <!-- Title above the canvas-->
+		
 	<canvas id="myCanvas" width="300" height="150" style="border:1px solid #000000;"> <!--Canvas code. Changed size.-->
         </canvas>
-	<p> </p> <!--Empty paragraph-->
+		
+	<p> </p> <!--Empty paragraph to create space for next button-->
+		
 	<a onclick= "drawRectangle();" class="w3-btn w3-black"> Draw Rectangle </a> <!--This should activate the function for drawing a rectangle inside the canvas-->
+		
 	<p> </p> <!--Empty paragraph to create space for next button-->
+		
 	<a onclick= "addName();" class="w3-btn w3-black"> Add Name </a> <!--This should activate the function to add my name to the canvas-->
+		
 	<p> </p> <!--Empty paragraph to create space for next button-->
+		
 	<a onclick = "addImage();" class="w3-btn w3-black"> Add Image </a> <!--This should activate the function to add image to the canvas-->
+		
         <p> </p> <!--Empty paragraph to create space for next button-->
+		
 	<a onclick= "eraseCanvas();" class="w3-btn w3-black"> Erase </a> <!--This should activate the function to erase the canvas-->
 	
         </div>
 </div>
 
-
-
 <footer class="w3-bottom w3-container w3-flat-carrot">
-	<p>DIY!</p>
+	<p>DIY App 6</p> <!--Changed the footer-->
 </footer>
 
 </body>
