@@ -48,8 +48,9 @@ function drawRectangle() { <!--This line of code should draw a rectangle inside 
 }
 
 function eraseCanvas() { <!--This function should erase the canvas-->
-  var eraseCanvas = document.getElementById("myCanvas");
-  rectangleCanvas.width = rectangleCanvas.width;
+  var eraseCanvas = 
+  document.getElementById("myCanvas");
+  eraseCanvas.width = eraseCanvas.width;
 }
 
 </script>
@@ -104,7 +105,7 @@ function eraseCanvas() { <!--This function should erase the canvas-->
 	<p> </p> <!--Empty paragraph-->
 	<a onclick= "drawRectangle();" class="w3-btn w3-black"> Draw Rectangle </a> <!--This should activate the function for drawing a rectangle inside the canvas-->
 	<p> </p> <!--Empty paragraph to create space for next button-->
-	<a onclick= "eraseCanvas();" class="w3-btn w3-black"> Draw Rectangle </a> <!--This should activate the function to erase the canvas-->
+	<a onclick= "eraseCanvas();" class="w3-btn w3-black"> Erase </a> <!--This should activate the function to erase the canvas-->
         
         </div>
 </div>
