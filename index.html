@@ -60,7 +60,7 @@ function addName() { <!--This function should add my name to the canvas-->
   ctx.fillText("Remy",10,50);
  }
 
-window.onload = function() {
+window.onload = function addImage() {
   var canvas = document.getElementById("myCanvas");
   var context = canvas.getContext("2d");
   var image = document.getElementById("Longhorn");
@@ -122,6 +122,8 @@ window.onload = function() {
 	<p> </p>
 	<a onclick= "addName();" class="w3-btn w3-black"> Add Name </a> <!--This should activate the function to add my name to the canvas-->
 	<p> </p> <!--Empty paragraph to create space for next button-->
+	<a onclick = "addImage();" class="w3-btn w3-black"> Add Name </a> <!--This should activate the function to add image to the canvas-->
+        <p> </p> <!--Empty paragraph to create space for next button-->
 	<a onclick= "eraseCanvas();" class="w3-btn w3-black"> Erase </a> <!--This should activate the function to erase the canvas-->
 	
         
