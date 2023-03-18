@@ -25,7 +25,8 @@ None at the time.
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
-	
+<!--Added to the comment above-->
+
    <head> 
       <title>App6---HTML5-Canvas</title>  
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -69,13 +70,30 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Content goes here.</p>
+	<p>Are You Ready To Draw With Canvas?</p> <!--Added text here-->
+	
+	<a href="#one" class="w3-btn w3-black w3-round"> Get Started </a>
 		
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 		
 </div>
+
+<div class="page" id="one">  <!--Created second page-->
+        <div id="header" class="w3-container w3-flat-carrot"> 
+               <h1>Canvas</h1> 
+        </div>
+    
+        <div id="content" class="w3-container"> 
+        <p>Draw Below</p>
+	<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"> <!--Canvas code-->
+        </canvas>
+        
+        </div>
+</div>
+
+
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
