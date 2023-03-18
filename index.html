@@ -53,6 +53,13 @@ function eraseCanvas() { <!--This function should erase the canvas-->
   eraseCanvas.width = eraseCanvas.width;
 }
 
+function addName() { <!--This function should add my name to the canvas-->
+  var c = document.getElementById("myCanvas");
+  var ctx = c.getContext("2d");
+  ctx.font = "30px Arial";
+  ctx.fillText("Remy",10,50);
+ }
+
 </script>
 
 
@@ -104,8 +111,11 @@ function eraseCanvas() { <!--This function should erase the canvas-->
         </canvas>
 	<p> </p> <!--Empty paragraph-->
 	<a onclick= "drawRectangle();" class="w3-btn w3-black"> Draw Rectangle </a> <!--This should activate the function for drawing a rectangle inside the canvas-->
+	<p> </p>
+	<a onclick= "addName();" class="w3-btn w3-black"> Add Name </a> <!--This should activate the function to add my name to the canvas-->
 	<p> </p> <!--Empty paragraph to create space for next button-->
 	<a onclick= "eraseCanvas();" class="w3-btn w3-black"> Erase </a> <!--This should activate the function to erase the canvas-->
+	
         
         </div>
 </div>
