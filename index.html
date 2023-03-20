@@ -61,16 +61,27 @@ function addName() { //This function should add my name to the canvas
   ctx.fillText("Remy",10,50); //Dimensions of text
  }
 
-function addImage() { //This function should add image to the canvas. Currently not working
-  var canvas = document.getElementById("myCanvas");
-  var context = canvas.getContext("2d");
-  var longhorn = newImage();
-  longhorn.src = "https://www.google.com/url?sa=i&url=https%3A%2F%2Ftexassports.com%2F&psig=AOvVaw07G1G2iz6-1lcuBb6Jdk8r&ust=1679263429516000&source=images&cd=vfe&ved=0CA4QjRxqFwoTCIDigPO95v0CFQAAAAAdAAAAABAJ";
-  longhorn.onload = function() {
-  context.drawImage(longhorn, 0, 0) 
-  } <!--Added end bracket-->
-}
+//function addImage() { //This function should add image to the canvas. Currently not working
+//  var canvas = document.getElementById("myCanvas");
+//  var context = canvas.getContext("2d");
+//  var longhorn = newImage();
+//  longhorn.src = "https://www.google.com/url?sa=i&url=https%3A%2F%2Ftexassports.com%2F&psig=AOvVaw07G1G2iz6-1lcuBb6Jdk8r&ust=1679263429516000&source=images&cd=vfe&ved=0CA4QjRxqFwoTCIDigPO95v0CFQAAAAAdAAAAABAJ";
+//  longhorn.onload = function() {
+//  context.drawImage(longhorn, 0, 0) 
+//  } <!--Added end bracket-->
+//}
 
+var img = new Image(); //This function should add image to the canvas. Found from chat GPT
+img.src = 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.m.wikipedia.org%2Fwiki%2FFile%3ATexas_Longhorns_logo.svg&psig=AOvVaw1q77a-ZCFxvU3eqzpyUKWY&ust=1679359185287000&source=images&cd=vfe&ved=0CA4QjRxqFwoTCOix_c6i6f0CFQAAAAAdAAAAABAj';
+img.addEventListener('load', function() {
+  // Your code to draw the image on the canvas goes here
+}, false);
+
+function addImage() {	
+  var canvas = document.getElementById('myCanvas');
+  var ctx = canvas.getContext('2d');
+  ctx.drawImage(img, 0, 0);
+}
 
 </script>
 
@@ -102,7 +113,7 @@ function addImage() { //This function should add image to the canvas. Currently 
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Are You Ready To Draw With Canvas?</p> <!--Added text here-->
+	<p>Are You Ready To Draw On A Canvas?</p> <!--Added text here-->
 	
 	<a href="#one" class="w3-btn w3-black w3-round"> Get Started </a> <!-- Button to move to the next page with canvas-->
 		
