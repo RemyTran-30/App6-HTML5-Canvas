@@ -76,11 +76,9 @@ function addImage() { //This function should add image to the canvas. Found from
   var img = new Image(); 
   img.src = 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.m.wikipedia.org%2Fwiki%2FFile%3ATexas_Longhorns_logo.svg&psig=AOvVaw1q77a-ZCFxvU3eqzpyUKWY&ust=1679359185287000&source=images&cd=vfe&ved=0CA4QjRxqFwoTCOix_c6i6f0CFQAAAAAdAAAAABAj';
   img.addEventListener('load', function() {
-  // Your code to draw the image on the canvas goes here
-}, false);
   var canvas = document.getElementById('myCanvas');
   var ctx = canvas.getContext('2d');
-  ctx.drawImage(img, 0, 0);
+  ctx.drawImage(img, 0, 0); }, false);
 }
 
 </script>
