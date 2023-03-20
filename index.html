@@ -20,7 +20,7 @@ Brief Description of Goal of Code:
 The goal of this code is to create a canvas that allows the user to display shapes, lines, text, and images.
 
 Known Issues:
-Currently not able to load image into the canvas.
+There are currently no known issues.
 
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
@@ -45,40 +45,29 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 function drawRectangle() { //This line of code should draw a rectangle inside the canvas
   var rectangleCanvas = document.getElementById("myCanvas"); //Passes information to the canvas
   var rectangleContext = rectangleCanvas.getContext("2d"); //Adjusted the type of canvas, which is 2D
-  rectangleContext.fillRect(50, 25, 150, 100); //The dimensions of the rectange
+  rectangleContext.fillRect(50, 25, 150, 100); //The dimensions of the rectange to be drawn in
 }
 
 function eraseCanvas() { //This function should erase the canvas
-  var eraseCanvas = 
+  var eraseCanvas = //Setting the variable to the code below
   document.getElementById("myCanvas"); //Passes information to the canvas
-  eraseCanvas.width = eraseCanvas.width; //Allows for reset of canvas
+  eraseCanvas.width = eraseCanvas.width; //Allows for reset of canvas when setting the width equal
 }
 
 function addName() { //This function should add my name to the canvas
   var c = document.getElementById("myCanvas"); //Passes information to the canvas
   var ctx = c.getContext("2d"); //Adjusted the type of canvas, which is 2D
   ctx.font = "30px Arial"; //Font of text
-  ctx.fillText("Remy",10,50); //Dimensions of text
+  ctx.fillText("Remy",10,50); //Dimensions of text and word to be drawn
  }
-
-//function addImage() { //This function should add image to the canvas. Currently not working
-//  var canvas = document.getElementById("myCanvas");
-//  var context = canvas.getContext("2d");
-//  var longhorn = newImage();
-//  longhorn.src = "https://www.google.com/url?sa=i&url=https%3A%2F%2Ftexassports.com%2F&psig=AOvVaw07G1G2iz6-1lcuBb6Jdk8r&ust=1679263429516000&source=images&cd=vfe&ved=0CA4QjRxqFwoTCIDigPO95v0CFQAAAAAdAAAAABAJ";
-//  longhorn.onload = function() {
-//  context.drawImage(longhorn, 0, 0) 
-//  } <!--Added end bracket-->
-//}
-
-
+	
 function addImage() { //This function should add image to the canvas. Found from chat GPT
-  var img = new Image(); 
-  img.src = 'https://www.universitycoop.com/media/product-images/12042601-default-1.jpg?resizeid=2&resizeh=240&resizew=240';
-  img.addEventListener('load', function() {
-  var canvas = document.getElementById('myCanvas');
-  var ctx = canvas.getContext('2d');
-  ctx.drawImage(img, 0, 0); }, false);
+  var img = new Image(); //Setting variable equal to a HTMLImageElement object which will allow for image to be displayed
+  img.src = 'https://www.universitycoop.com/media/product-images/12042601-default-1.jpg?resizeid=2&resizeh=240&resizew=240'; //Image URL
+  img.addEventListener('load', function() { //An event listener which looks out for when image is uploaded
+  var canvas = document.getElementById('myCanvas'); //Passes information to the canvas
+  var ctx = canvas.getContext('2d'); //Adjusted the type of canvas, which is 2D
+  ctx.drawImage(img, 0, 0); }, false); //Draws image into the canvas. Also sets its dimensions
 }
 
 </script>
